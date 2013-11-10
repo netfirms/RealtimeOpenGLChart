@@ -1,12 +1,8 @@
 package com.taweechai.realtimeopenglchart.opengl;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.PixelFormat;
 import android.opengl.GLSurfaceView;
-import android.util.Log;
-import android.view.SurfaceHolder;
 
 public class RealtimeChartSurfaceView extends GLSurfaceView{
 
@@ -24,7 +20,6 @@ public class RealtimeChartSurfaceView extends GLSurfaceView{
 	public RealtimeChartSurfaceView(Context context) {
 		super(context);
             
-		//setEGLContextClientVersion(2);
         setEGLConfigChooser(8, 8, 8, 8, 16, 0);
 		this.setZOrderOnTop(true); //necessary
 		getHolder().setFormat(PixelFormat.TRANSLUCENT);
@@ -53,8 +48,6 @@ public class RealtimeChartSurfaceView extends GLSurfaceView{
     		}
     		//this.datapoints[this.datapoints.length - 1] = (((0.0f - gMinValue) * (1.0f - (-1.0f))/(gMaxValue - gMinValue)) + (-1));
     		isUpdating = false;
-    		//chartRenderer.chartData = this.datapoints;
-    		//requestRender();
     	}
     	else {
     		
